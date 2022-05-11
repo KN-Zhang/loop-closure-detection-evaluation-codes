@@ -6,6 +6,8 @@ load('./data/cc_MAGSAC++.mat');
 load('./GT/city_GT_final.mat');
 truth=GT;
 
+aaAAA
+
 %%%% kitti00 %%%%
 % load('./GT/groundTruth_KITTI00.mat');
 % truth=double(groundTruthMatrixKITTI00_ICRA18);
