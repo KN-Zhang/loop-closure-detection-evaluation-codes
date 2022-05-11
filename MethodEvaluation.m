@@ -1,12 +1,13 @@
 clear; close all;
-%% load results of feature matching
+%% 
+%%%% load results of feature matching %%%%
 load('./data/cc_MAGSAC++.mat');
-%% load ground truth 
+%% 
+%%%% load ground truth %%%%
+
 %%%% citycentre %%%%
 load('./GT/city_GT_final.mat');
 truth=GT;
-
-aaAAA
 
 %%%% kitti00 %%%%
 % load('./GT/groundTruth_KITTI00.mat');
@@ -66,19 +67,21 @@ aaAAA
 % load('./GT/190809_0845_GT_labeled.mat');
 % truth=GT;
 
-%% settings of the dataset
-frame_rate=10; %% (Hz), number of frames captured per second
-time_constant=40; %% (s), time in non-redundancy path
+%% 
+%%%% settings of the dataset %%%%
+frame_rate=10; % (Hz), number of frames captured per second
+time_constant=40; % (s), time in non-redundancy path
 
-%%  evaluation for the maximum recall rate at 100% precision (MR)
+%%  
+%%%% evaluation for the maximum recall rate at 100% precision (MR) %%%%
 Precision=[];
 Recall=[];
 
-%%images captured before the query one would not be considered whether they
-%%meet the condition of being a candidate frame.
+% images captured before the query one would not be considered whether they
+% meet the condition of being a candidate frame
 match_results=tril(match_results,-frame_rate*time_constant);
 
-%%the tolerance of evaluation is set to 10 neighboring locations
+% the tolerance of evaluation is set to 10 neighboring locations
 TP_tol=conv2(truth,ones(1,2*10+1),'same')>0;
 
 for tau=1:max(match_results(:))-1
@@ -98,4 +101,4 @@ end
 
 result_ind=find(Precision==1);
 result_ind=result_ind(1);
-MR=Recall(result_ind)
+MR=Recall(result_ind) % the metric you need
