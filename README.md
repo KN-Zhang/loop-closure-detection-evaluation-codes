@@ -10,7 +10,7 @@ Our previous work mainly focused on proposing LCD-specific feature matching meth
 4. Run [MethodEvaluation.m](https://github.com/KN-Zhang/loop-closure-detection-evaluation-codes/blob/main/MethodEvaluation.m). You will get your **MR** result.
 
 # BibTex Citation
-If you find the codes useful, please consider citing [previous publication](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9457132). More details of the used datasets and the evaluation procedure can be found in it. 
+If you find the codes useful, please consider citing our [previous publication](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9457132). More details of the used datasets and the evaluation procedure can be found in it. 
 ```
 @article{zhang2021appearance,
   title={Appearance-Based Loop Closure Detection via Locality-Driven Accurate Motion Field Learning},
@@ -20,3 +20,5 @@ If you find the codes useful, please consider citing [previous publication](http
   publisher={IEEE}
 }
 ```
+# Datasets
+Later we will update the links to some LCD datasets here.
